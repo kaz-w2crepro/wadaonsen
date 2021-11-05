@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+@import "configuration";
+
+@keyframes lineMove {
+  0% {
+    bottom: 100%;
+    height: 0;
+  }
+  20% {
+    bottom: 0;
+    height: 100%;
+  }
+  40% {
+    bottom: 0;
+    height: 0;
+  }
+  100% {
+    bottom: 0;
+    height: 0;
+  }
+}
+
+.works__detailWrapper {
+  padding: 70px 0;
+  width: 100%;
+  height: 1300px;
+  background: rgb(180, 180, 180);
+  color: #707070;
+  .works__detail {
+    position: relative;
+    height: 100%;
+    .scrollLine {
+      position: absolute;
+      left: 110px;
+      top: 600px;
+      width: 1px;
+      height: 187px;
+      background-color: #a8aaac;
+      transition: all 1.4s;
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 1px;
+        background-color: #111;
+        -webkit-animation: lineMove 3s ease infinite;
+        animation: lineMove 3s ease infinite;
+      }
+    }
+    span {
+      display: block;
+      position: absolute;
+      left: 110px;
+      top: 690px;
+      writing-mode: vertical-rl;
+      transform: translateY(-50%) translateX(-50%);
+      font-size: 32px;
+    }
+    .works__contentArea {
+      margin-left: auto;
+      background: #fff;
+      width: 85%;
+      height: auto;
+      padding-bottom: 70px;
+      .works__detailMedia {
+        width: 730px;
+        height: 100%;
+        margin: 0 auto;
+        .works__thumbnail {
+          width: 100%;
+          height: 487px;
+          margin: 0 auto;
+          padding-top: 70px;
+          img {
+            object-fit: cover;
+            width: 100%;
+          }
+        }
+        .works__detailTitle {
+          margin-top: 25px;
+          font-size: 40px;
+        }
+        .works__detailDay {
+          margin-top: 18px;
+          font-size: 20px;
+        }
+        .works__detailContent {
+          margin-top: 54px;
+          font-size: 20px;
+        }
+        .pagination__wrapper {
+          margin-top: 83px;
+          display: flex;
+          justify-content: space-between;
+          .pagination__prev {
+            font-size: 32px;
+          }
+          .pagination__next {
+            font-size: 32px;
+          }
+        }
+      }
+    }
+  }
+}

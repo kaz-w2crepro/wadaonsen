@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+$primary: #fc4a1a;
+$black_333: #333333;
+$white＿fcf: #fcfcfc;
+$gray_dbd: #dbdbdb;
+$green_4ab: #4abdac;
+
+$msp: "only screen and (max-width:374px)";
+$sp: "only screen and (max-width:480px)";
+$tab: "only screen and (max-width:768px)";
+$pc: "only screen and (min-width:769px)";
+
+@mixin flex{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin bgi{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin noto__sans{
+  font-family: "Noto Sans JP", sans-serif;
+}
